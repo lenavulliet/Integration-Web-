@@ -1,0 +1,69 @@
+
+$colorPrimary: #11118B;
+$colorSecondary: white;
+$textColor: black;
+$primaryFont: "Lato", sans-serif;
+$colorBloc: #EEEEFC;
+
+
+
+@mixin texte (){
+    color : $textColor;
+    padding-left: 60px;
+    font-size: 23px;
+}
+
+@mixin titre ($font-size: 45px){
+    color: $colorPrimary;
+    font-weight: bold;
+    font-size: $font-size;
+    padding-left: 60px;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $primaryFont;
+}
+
+header {
+    background-color: $colorPrimary;
+    height: 94px;
+}
+
+header h1 {
+    margin: 0;              
+    padding: 24px 0;
+}
+
+h1 {
+    font-size: 40px;
+    color: $colorSecondary;
+}
+
+.bloc {
+    background-color: $colorBloc;
+    box-sizing: content-box;
+}
+
+.texte {
+    @include texte();
+}
+
+h2 {
+    @include titre(60px)
+}
+h3 {
+    @include titre()
+}
+button{
+
+    background-color: $colorPrimary;
+    font-size: 23px;
+    color: $colorSecondary;
+    border: none;
+    margin-left: 60px;
+    padding : 16px 24px; 
+
+}
